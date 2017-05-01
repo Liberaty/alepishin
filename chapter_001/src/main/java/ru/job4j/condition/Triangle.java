@@ -23,21 +23,6 @@ public class Triangle {
      */
 	private Point c;
 	/**
-	 * d1.
-     * @see d1
-     */
-	private double d1;
-	/**
-	 * d2.
-     * @see d2
-     */
-	private double d2;
-	/**
-	 * d3.
-     * @see d3
-     */
-	private double d3;
-	/**
 	 * Triangle.
      * @see Triangle
 	 * @param a - Point.
@@ -55,45 +40,31 @@ public class Triangle {
      */
 	public double area() {
 		// calculate the triangle area
+		double d1 = this.side(this.a, this.b);
+		double d2 = this.side(this.b, this.c);
+		double d3 = this.side(this.a, this.c);
 		double semiP = (d1 + d2 + d3) / 2;
 		double area = Math.sqrt(semiP * (semiP - d1) * (semiP - d2) * (semiP - d3));
 		return area;
 	}
 	/**
-     * side1.
+     * side.
      * @param a - Point.
 	 * @param b - Point.
-	 * @return d1 - double.
+	 * @return side - double.
      */
-	public double side1(Point a, Point b) {
-		d1 = Math.sqrt((2 * (b.getX() - a.getX())) + (2 * (b.getY() - a.getY())));
-		return d1;
-	}
-	/**
-     * side2.
-     * @param b - Point.
-	 * @param c - Point.
-	 * @return d2 - double.
-     */
-	public double side2(Point b, Point c) {
-		d2 = Math.sqrt((2 * (c.getX() - b.getX())) + (2 * (c.getY() - b.getY())));
-		return d2;
-	}
-	/**
-     * side3.
-     * @param a - Point.
-	 * @param c - Point.
-	 * @return d3 - double.
-     */
-	public double side3(Point a, Point c) {
-		d3 = Math.sqrt((2 * (c.getX() - a.getX())) + (2 * (c.getY() - a.getY())));
-		return d3;
-	}
+	 public double side(Point a, Point b) {
+		double side = Math.sqrt((2 * (b.getX() - a.getX())) + (2 * (b.getY() - a.getY())));
+		return side;
+	 }
 	/**
      * compareSides.
 	 * @return compareSides - boolean.
      */
 	 public boolean compareSides() {
+		double d1 = this.side(this.a, this.b);
+		double d2 = this.side(this.b, this.c);
+		double d3 = this.side(this.a, this.c);
 		return ((d1 < (d2 + d3)) || (d2 < (d1 + d3)) || (d3 < (d1 + d2)));
 	 }
 }
