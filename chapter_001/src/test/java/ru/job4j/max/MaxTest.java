@@ -18,7 +18,7 @@ public class MaxTest {
 	@Test
 	public void whenMaxFourBiggerTwoThenFour() {
 		Max maxValue = new Max();
-		int verifiable = maxValue.max1(4, 2);
+		int verifiable = maxValue.max(4, 2);
 		int expected = 4;
 		assertThat(verifiable, is(expected));
     }
@@ -28,7 +28,7 @@ public class MaxTest {
 	@Test
 	public void whenMaxFourBiggerTwoButSmallerThreeThenFourMax() {
 		Max maxValue = new Max();
-		int verifiable = maxValue.max2(4, 2, 3);
+		int verifiable = maxValue.max(4, 2, 3);
 		int expected = 4;
 		assertThat(verifiable, is(expected));
     }

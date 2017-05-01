@@ -39,10 +39,9 @@ public class Triangle {
 	 * @return area - boolean.
      */
 	public double area() {
-		// calculate the triangle area
-		double d1 = this.side(this.a, this.b);
-		double d2 = this.side(this.b, this.c);
-		double d3 = this.side(this.a, this.c);
+		double d1 = side(this.a, this.b);
+		double d2 = side(this.b, this.c);
+		double d3 = side(this.a, this.c);
 		double semiP = (d1 + d2 + d3) / 2;
 		double area = Math.sqrt(semiP * (semiP - d1) * (semiP - d2) * (semiP - d3));
 		return area;
@@ -54,17 +53,16 @@ public class Triangle {
 	 * @return side - double.
      */
 	 public double side(Point a, Point b) {
-		double side = Math.sqrt((2 * (b.getX() - a.getX())) + (2 * (b.getY() - a.getY())));
-		return side;
+		return Math.sqrt((2 * (b.getX() - a.getX())) + (2 * (b.getY() - a.getY())));
 	 }
 	/**
      * compareSides.
 	 * @return compareSides - boolean.
      */
 	 public boolean compareSides() {
-		double d1 = this.side(this.a, this.b);
-		double d2 = this.side(this.b, this.c);
-		double d3 = this.side(this.a, this.c);
+		double d1 = side(this.a, this.b);
+		double d2 = side(this.b, this.c);
+		double d3 = side(this.a, this.c);
 		return ((d1 < (d2 + d3)) || (d2 < (d1 + d3)) || (d3 < (d1 + d2)));
 	 }
 }

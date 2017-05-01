@@ -8,22 +8,22 @@ package ru.job4j.max;
  */
 public class Max {
 	/**
-     * Max1.
+     * Max.
      * @param first - first.
 	 * @param second - second.
 	 * @return result - result.
      */
-	public int max1(int first, int second) {
+	public int max(int first, int second) {
 		return first > second ? first : second;
 	}
 	/**
-     * Max2.
+     * Overload Max.
      * @param first - first.
 	 * @param second - second.
 	 * @param third - third.
 	 * @return this.max1 - max.
      */
-	public int max2(int first, int second, int third) {
-		return this.max1(this.max1(first, second), third);
+	public int max(int first, int second, int third) {
+		return max(max(first, second), third);
 	}
 }
