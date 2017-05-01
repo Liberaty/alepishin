@@ -11,19 +11,19 @@ public class Point {
 	 * x.
      * @see x
      */
-    private int x;
+    private double x;
 	/**
 	 * y.
      * @see y
      */
-    private int y;
+    private double y;
 	/**
 	 * Point.
      * @see Point
-	 * @param x - x.
-	 * @param y - y.
+	 * @param x - double.
+	 * @param y - double.
      */
-    public  Point(int x, int y) {
+    public  Point(double x, double y) {
       this.x = x;
       this.y = y;
     }
@@ -31,23 +31,23 @@ public class Point {
      * getX.
 	 * @return this.x
      */
-	public int getX() {
+	public double getX() {
       return this.x;
     }
 	/**
      * getY.
 	 * @return this.y
      */
-    public int getY() {
+    public double getY() {
      return this.y;
     }
 	/**
      * Is.
-     * @param a - int.
-	 * @param b - int.
+     * @param a - double.
+	 * @param b - double.
 	 * @return boolean - boolean.
      */
-	public boolean is(int a, int b) {
-		return this.y * this.x == a * this.x + b ? true : false;
+	public boolean is(double a, double b) {
+		return this.y == a * this.x + b;
     }
 }

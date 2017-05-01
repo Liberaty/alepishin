@@ -16,9 +16,9 @@ public class PointTest {
 	* Test is.
 	*/
 	@Test
-	public void whenPointTwoAndThreeOnLineTwoAndTwoThanTrue() {
-		Point pointOnLine = new Point(2, 3);
-		boolean verifiable = pointOnLine.is(2, 2);
+	public void whenPointTwoAndSixOnLineTwoAndTwoThanTrue() {
+		Point pointOnLine = new Point(2.0, 6.0);
+		boolean verifiable = pointOnLine.is(2.0, 2.0);
 		boolean expected = true;
 		assertThat(verifiable, is(expected));
     }
