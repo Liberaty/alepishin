@@ -89,4 +89,11 @@ public class Triangle {
 		d3 = Math.sqrt((2 * (c.getX() - a.getX())) + (2 * (c.getY() - a.getY())));
 		return d3;
 	}
+	/**
+     * compareSides.
+	 * @return compareSides - boolean.
+     */
+	 public boolean compareSides() {
+		return ((d1 < (d2 + d3)) || (d2 < (d1 + d3)) || (d3 < (d1 + d2)));
+	 }
 }
