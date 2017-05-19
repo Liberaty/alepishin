@@ -16,19 +16,11 @@ public class Paint {
 		StringBuilder sBuilder = new StringBuilder("");
 			int width = h + (h - 1);
 			for (int i = 1; i <= h; i++) {
-				for (int j = width; j <= width; j--) {
-					if () {
-						if () {
-							sBuilder.append(" ");
-						} else {
-							sBuilder.append("^");
-						}
+				for (int j = 1; j <= width; j++) {
+					if (j <= h - i || j >= h + i) {
+						sBuilder.append(" ");
 					} else {
-						if () {
-							sBuilder.append(" ");
-						} else {
-							sBuilder.append("^");
-						}
+						sBuilder.append("^");
 					}
 				}
 				sBuilder.append(System.getProperty("line.separator"));
