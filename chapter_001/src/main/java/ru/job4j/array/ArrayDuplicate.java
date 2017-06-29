@@ -19,11 +19,13 @@ public class ArrayDuplicate {
 		String addedWord = "";
 		int count = 0;
 		for (int i = 0; i < array.length; i++) {
-			if (addedWord != array[i]) {
-			words[count] = array[i];
-			count++;
-			addedWord = words[count - 1];
+			for (int j = 0; j <= i; j++) {
+				if (array[i] == array[j]) {
+					words[i] = array[j];
+					//addedWord = words[count];
+				}
 			}
+			count++;
 		}
 		return Arrays.copyOf(words, count);
 	}
