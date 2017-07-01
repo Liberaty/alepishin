@@ -15,7 +15,6 @@ public class ArrayDuplicate {
 	 * @return Arrays.
 	 */
 	public String[] remove(String[] array) {
-		//String[] words = new String[array.length];
 		String bufer = null;
 		int count = array.length;
 		for (int i = 0; i < count; i++) {
@@ -26,11 +25,11 @@ public class ArrayDuplicate {
 				if (array[i].equals(array[j])) {
 					count--;
 					bufer = array[count];
-					array[count] = array[j];
+					array[count] = null;
 					array[j] = bufer;
 				}
 			}
 		}
-		return Arrays.copyOf(array, array.length - (count - 1));
+		return Arrays.copyOf(array, count);
 	}
 }
